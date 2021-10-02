@@ -6,6 +6,7 @@
 - no direct pushes to `dev` branch. all changes will be made through PRs (pull requests)
 - all PRs should be directed to `dev` branch
 - make sure to pull from destination branch before creating PR
+- run `yarn lint` and `yarn build` before creating PR
 - branches should be pre-pended by its purpose
 
 ```bash
