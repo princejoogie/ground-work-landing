@@ -2,7 +2,7 @@ import { useCallback, useState, useEffect } from "react";
 
 const useScroll = () => {
   const [isUp, setIsUp] = useState(true);
-  const [yOffset, setYOffset] = useState(() => window.scrollY);
+  const [yOffset, setYOffset] = useState(0);
 
   const handleScroll = useCallback(
     (e) => {

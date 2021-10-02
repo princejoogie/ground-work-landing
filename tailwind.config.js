@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
   mode: "jit",
@@ -7,6 +9,7 @@ module.exports = {
       colors: {
         primary: "#FFDB00",
         secondary: "#132D63",
+        gray: colors.trueGray,
       },
     },
   },
