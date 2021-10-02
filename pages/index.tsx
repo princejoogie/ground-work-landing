@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Container, Layout } from "../src/components";
@@ -18,3 +19,26 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+=======
+import type { NextPage } from "next";
+import { Container, Layout, HomeNavbar } from "@/components";
+
+const Index: NextPage = () => {
+  return (
+    <Layout
+      title="Ground Work"
+      description="An online B2B platform designed to create and gather networks for business establishments in the country!"
+    >
+      <HomeNavbar />
+
+      <div className="flex flex-col mt-8">
+        <Container>
+          <h1>Home</h1>
+        </Container>
+      </div>
+    </Layout>
+  );
+};
+
+export default Index;
+>>>>>>> Stashed changes
