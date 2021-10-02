@@ -4,13 +4,7 @@ import "firebase/auth";
 import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDaP02sPfJMxqgreJpdIeZ1-0bh5z_XR54",
-  authDomain: "joogie.firebaseapp.com",
-  projectId: "joogie",
-  storageBucket: "joogie.appspot.com",
-  messagingSenderId: "911056525926",
-  appId: "1:911056525926:web:290dfa68878a828bae6ba7",
-  measurementId: "G-2KE47098HV",
+  // TODO: #11 fill in with config
 };
 
 if (!firebase.apps.length) {
