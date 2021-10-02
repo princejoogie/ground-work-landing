@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import { Container, Layout } from "../src/components";
+import { Container, Layout, Navbar } from "@/components";
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +7,7 @@ const Home: NextPage = () => {
       title="Ground Work"
       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nobis."
     >
+      <Navbar />
       <div className="flex flex-col">
         <Container>
           <h1>Hello World</h1>
