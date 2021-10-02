@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
-import { Container, Layout, HomeNavbar } from "@/components";
+import { Container, HomeLayout } from "@/components";
 
 const Services: NextPage = () => {
   return (
-    <Layout
+    <HomeLayout
       title="Ground Work | Services"
       description="An online B2B platform designed to create and gather networks for business establishments in the country!"
     >
@@ -12,7 +12,7 @@ const Services: NextPage = () => {
           <h1>Services</h1>
         </Container>
       </div>
-    </Layout>
+    </HomeLayout>
   );
 };
 

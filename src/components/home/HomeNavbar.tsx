@@ -51,9 +51,7 @@ const HomeNavbar = () => {
         top: isUp ? 0 : -navHeight,
       }}
       ref={navRef}
-      className={`sticky z-50 transition-all duration-300 bg-white shadow ${
-        yOffset > navHeight - 10 ? "py-4" : "py-12"
-      }`}
+      className={`sticky z-50 transition-all duration-300 bg-white shadow py-4`}
     >
       <Container>
         <div className="flex items-center space-x-4">
