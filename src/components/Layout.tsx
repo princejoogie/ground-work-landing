@@ -1,5 +1,6 @@
 import React from "react";
 import { NextSeo, NextSeoProps } from "next-seo";
+
 import { Footer } from "@/components";
 
 const Layout: React.FC<NextSeoProps> = ({ children, ...rest }) => {
