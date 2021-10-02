@@ -7,7 +7,7 @@
 - all PRs should be directed to `dev` branch
 - branches should be pre-pended by its purpose
 
-```
+```bash
     # for chores
     chore/<branch-name>
 
@@ -20,18 +20,18 @@
 
 - package import and local imports should be separated
 
-```
-    # Package imports
-    import React from "react";
-    import { NextSeo, NextSeoProps } from "next-seo";
+```js
+// Package imports
+import React from "react";
+import { NextSeo, NextSeoProps } from "next-seo";
 
-    # Local imports
-    import { Footer } from "@/components";
+// Local imports
+import { Footer } from "@/components";
 ```
 
 - always use absolute imports. app is configures to use `@/` which points to `src/` directory
 
-```
-    # ex.
-    import { Footer } from "@/components";
+```js
+// ex.
+import { Footer } from "@/components";
 ```
