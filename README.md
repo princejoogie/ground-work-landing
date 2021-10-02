@@ -1,6 +1,4 @@
 # Ground Work
-<<<<<<< Updated upstream
-=======
 
 ## Notes
 
@@ -37,4 +35,3 @@ import { Footer } from "@/components";
 // ex.
 import { Footer } from "@/components";
 ```
->>>>>>> Stashed changes
