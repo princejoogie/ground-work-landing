@@ -37,13 +37,13 @@ const HomeNavbar = () => {
   const [navHeight, setNavHeight] = useState(0);
   const navRef = useRef<HTMLElement>(null);
   const router = useRouter();
-  const { isUp } = useScroll();
+  const { isUp, yOffset } = useScroll();
 
   useEffect(() => {
     if (navRef.current) {
       setNavHeight(navRef.current.clientHeight);
     }
-  }, [navRef]);
+  }, [yOffset]);
 
   return (
     <nav
@@ -51,7 +51,9 @@ const HomeNavbar = () => {
         top: isUp ? 0 : -navHeight,
       }}
       ref={navRef}
-      className="sticky z-50 py-10 transition-all duration-300 bg-white shadow"
+      className={`sticky z-50 transition-all duration-300 bg-white shadow ${
+        yOffset > navHeight - 10 ? "py-4" : "py-12"
+      }`}
     >
       <Container>
         <div className="flex items-center space-x-4">
