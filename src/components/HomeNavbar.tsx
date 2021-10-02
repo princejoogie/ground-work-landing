@@ -49,10 +49,8 @@ const HomeNavbar = () => {
               return (
                 <Link key={href} href={href}>
                   <a
-                    className={`px-4 py-1 rounded-full ${
-                      active
-                        ? "bg-secondary text-white"
-                        : "bg-primary text-black"
+                    className={`px-4 text-sm text-black py-1 rounded-full ${
+                      active && "bg-[#E7D6F9]"
                     }`}
                   >
                     {name}
