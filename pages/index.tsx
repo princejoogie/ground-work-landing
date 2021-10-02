@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import { Container, Layout, HomeNavbar } from "@/components";
+import { Container, HomeLayout, HomeNavbar } from "@/components";
 import styles from "@styles/home.module.css";
 
 const Index: NextPage = () => {
   return (
-    <Layout
+    <HomeLayout
       title="Ground Work | Home"
       description="An online B2B platform designed to create and gather networks for business establishments in the country!"
     >
@@ -41,7 +41,7 @@ const Index: NextPage = () => {
           <h1>Home</h1>
         </Container>
       </div>
-    </Layout>
+    </HomeLayout>
   );
 };
 
