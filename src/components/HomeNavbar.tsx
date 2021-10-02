@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { Container } from "@/components";
+import { useScroll } from "@/hooks";
 
 interface LinkItem {
   name: string;
@@ -33,23 +34,40 @@ const links: LinkItem[] = [
 ];
 
 const HomeNavbar = () => {
+  const [navHeight, setNavHeight] = useState(0);
+  const navRef = useRef<HTMLElement>(null);
   const router = useRouter();
+  const { isUp } = useScroll();
+
+  useEffect(() => {
+    if (navRef.current) {
+      setNavHeight(navRef.current.clientHeight);
+    }
+  }, [navRef]);
 
   return (
-    <nav className="sticky w-full py-8 transition-all duration-300 bg-white">
+    <nav
+      style={{
+        top: isUp ? 0 : -navHeight,
+      }}
+      ref={navRef}
+      className="sticky z-50 py-10 transition-all duration-300 bg-white shadow"
+    >
       <Container>
         <div className="flex items-center space-x-4">
-          <h1 className="text-xl font-bold uppercase text-primary">
-            Ground<span className="text-secondary">Work.</span>PH
-          </h1>
+          <Link href="/">
+            <a className="text-xl font-bold uppercase text-primary">
+              Ground<span className="text-secondary">Work.</span>PH
+            </a>
+          </Link>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center">
             {links.map(({ name, href }) => {
               const active = router.pathname === href;
               return (
                 <Link key={href} href={href}>
                   <a
-                    className={`px-4 text-sm text-black py-1 rounded-full ${
+                    className={`px-6 text-sm text-black py-1 rounded-full ${
                       active && "bg-[#E7D6F9]"
                     }`}
                   >

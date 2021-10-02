@@ -1,13 +1,32 @@
 import React from "react";
 import { NextSeo, NextSeoProps } from "next-seo";
 
-import { Footer } from "@/components";
+import { Footer, HomeNavbar } from "@/components";
+import { motion } from "framer-motion";
+
+const variants = {
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 
 const Layout: React.FC<NextSeoProps> = ({ children, ...rest }) => {
   return (
     <div className="bg-gray-100">
       <NextSeo {...rest} />
-      <main className="min-h-screen">{children}</main>
+      <HomeNavbar />
+
+      <motion.main
+        variants={variants}
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        transition={{ duration: 0.3 }}
+        className="min-h-screen"
+      >
+        {children}
+      </motion.main>
+
       <Footer />
     </div>
   );
