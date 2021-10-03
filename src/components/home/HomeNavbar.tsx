@@ -1,9 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import { Container } from "@/components";
-import { useScroll } from "@/hooks";
+import logo from '../../../public/assets/logo1.png';
+
+import { Container } from '@/components';
+import { useScroll } from '@/hooks';
 
 interface LinkItem {
   name: string;
@@ -12,24 +15,24 @@ interface LinkItem {
 
 const links: LinkItem[] = [
   {
-    name: "Home",
-    href: "/",
+    name: 'Home',
+    href: '/',
   },
   {
-    name: "About",
-    href: "/about",
+    name: 'About',
+    href: '/about',
   },
   {
-    name: "Services",
-    href: "/services",
+    name: 'Services',
+    href: '/services',
   },
   {
-    name: "Contact",
-    href: "/contact",
+    name: 'Contact',
+    href: '/contact',
   },
   {
-    name: "Blog",
-    href: "/blog",
+    name: 'Blog',
+    href: '/blog',
   },
 ];
 
@@ -53,22 +56,30 @@ const HomeNavbar = () => {
       ref={navRef}
       className={`sticky z-50 transition-all duration-300 bg-white shadow py-4`}
     >
-      <Container>
-        <div className="flex items-center space-x-4">
-          <Link href="/">
-            <a className="text-xl font-bold uppercase text-primary">
-              Ground<span className="text-secondary">Work.</span>PH
+      <Container className='flex h-10 '>
+        <div className='flex items-center space-x-4'>
+          <Image
+            src={logo}
+            width={80}
+            height={80}
+            alt='Logo'
+            objectFit='contain'
+            objectPosition='center'
+          />
+          <Link href='/'>
+            <a className='items-center hidden text-lg font-bold uppercase md:text-xl sm:block text-primary'>
+              Ground<span className='text-secondary'>Work.</span>PH
             </a>
           </Link>
 
-          <div className="flex items-center">
+          <div className='items-center hidden md:flex'>
             {links.map(({ name, href }) => {
               const active = router.pathname === href;
               return (
                 <Link key={href} href={href}>
                   <a
-                    className={`px-6 text-sm text-black py-1 rounded-full ${
-                      active && "bg-[#E7D6F9]"
+                    className={`px-6 text-sm text-black py-1 rounded-full mr-2 bg-[#E7D6F9] ${
+                      active && 'bg-primary'
                     }`}
                   >
                     {name}
