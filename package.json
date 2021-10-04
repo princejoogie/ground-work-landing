@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "format": "prettier --write .",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build"
   },
   "dependencies": {
     "firebase": "^8.10.0",
@@ -39,6 +45,7 @@
     "stylelint-prettier": "^1.2.0",
     "tailwindcss": "^2.2.16",
     "tslint-plugin-prettier": "^2.3.0",
-    "typescript": "4.4.3"
+    "typescript": "4.4.3",
+    "husky": "^7.0.0"
   }
 }
