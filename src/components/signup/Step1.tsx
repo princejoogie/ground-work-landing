@@ -11,10 +11,7 @@ interface Step1Props {
 
 const Step1 = ({ setStep }: Step1Props) => {
   return (
-    <form
-      spellCheck="false"
-      className="bg-white rounded-2xl flex flex-col items-center w-[600px] mx-auto min-h-screen relative"
-    >
+    <form spellCheck="false" className="signup-form">
       <div className="w-full flex flex-col items-center py-8 shadow-lg rounded-b-lg">
         <h1 className="font-bold text-3xl text-secondary mb-8">
           Join Groundwork!
@@ -36,7 +33,7 @@ const Step1 = ({ setStep }: Step1Props) => {
 
         <button
           onClick={() => setStep(2)}
-          className="bg-secondary mb-4 text-white rounded-lg text-center p-3 primary-ring absolute bottom-4 w-[70%]"
+          className="proceed-btn"
           type="button"
         >
           Proceed

@@ -8,6 +8,14 @@
   .primary-ring {
     @apply focus:ring focus:ring-primary transition-all duration-200;
   }
+
+  .proceed-btn {
+    @apply bg-secondary mb-4 text-white rounded-lg text-center p-3 primary-ring absolute bottom-4 w-[70%] hover:bg-opacity-90;
+  }
+
+  .signup-form {
+    @apply bg-white rounded-2xl flex flex-col items-center w-[600px] mx-auto min-h-screen relative;
+  }
 }
 
 html,

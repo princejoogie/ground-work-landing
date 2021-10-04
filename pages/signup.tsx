@@ -5,6 +5,7 @@ import type { NextPage } from "next";
 import { Container, HomeLayout } from "@/components";
 import Step1 from "@/components/signup/Step1";
 import Step2 from "@/components/signup/Step2";
+import Step3 from "@/components/signup/Step3";
 
 const SignUp: NextPage = () => {
   const [step, setStep] = useState(1);
@@ -19,6 +20,7 @@ const SignUp: NextPage = () => {
           <AnimatePresence>
             {step === 1 && <Step1 setStep={setStep} />}
             {step === 2 && <Step2 setStep={setStep} />}
+            {step === 3 && <Step3 setStep={setStep} />}
           </AnimatePresence>
         </Container>
       </div>

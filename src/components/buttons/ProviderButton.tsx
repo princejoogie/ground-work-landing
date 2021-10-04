@@ -12,7 +12,7 @@ const ProviderButton = ({ auth, action, Icon }: ProviderProps) => {
     <button
       onClick={action}
       type="button"
-      className="bg-secondary mb-4 text-white rounded-lg text-center p-4 relative primary-ring"
+      className="bg-secondary mb-4 text-white rounded-lg text-center p-4 relative primary-ring hover:bg-opacity-90"
     >
       <Icon className="text-2xl text-primary absolute left-4" />
       <p>Sign Up with {auth}</p>
