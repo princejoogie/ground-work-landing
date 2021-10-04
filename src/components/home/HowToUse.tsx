@@ -10,7 +10,7 @@ const steps = [
         Create a <strong>Groundwork.PH</strong> account.
       </h4>
     ),
-    href: "/s",
+    href: "/s/signup",
     ctaText: "Create Account",
   },
   {
@@ -19,7 +19,7 @@ const steps = [
         <strong>Search</strong> for the needed resources for your business.
       </h4>
     ),
-    href: "/s",
+    href: "/s/search",
     ctaText: "Start shopping",
   },
   {
@@ -62,7 +62,7 @@ const Testimonial = () => {
         <div className="grid grid-cols-1 overflow-hidden rounded-md md:grid-cols-3">
           {steps.map(({ Text, href, ctaText }, i) => (
             <div
-              key={href}
+              key={`htu-${href}`}
               className={`flex flex-col justify-between items-start   py-8 px-6 `}
             >
               <div>
