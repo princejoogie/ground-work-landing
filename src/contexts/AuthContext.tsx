@@ -18,22 +18,27 @@ export const AuthContext = createContext<AuthContextProps>({
 
 export const AuthProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState<firebase.User | null>(null);
+  const [userLoading, setUserLoading] = useState(true);
   const [data, setData] = useState<firebase.firestore.DocumentData | null>(
     null
   );
+  const [dataLoading, setDataLoading] = useState(true);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
+    setUserLoading(() => true);
     const listener = auth.onAuthStateChanged((_user) => {
       setUser(_user);
+      setUserLoading(() => false);
     });
 
     return listener;
   }, []);
 
   useEffect(() => {
-    setLoading(true);
+    setDataLoading(() => true);
     (async () => {
       try {
         if (user) {
@@ -46,9 +51,17 @@ export const AuthProvider: React.FC = ({ children }) => {
         setError(err.message);
       }
 
-      setLoading(false);
+      setDataLoading(() => false);
     })();
   }, [user]);
+
+  useEffect(() => {
+    if (userLoading || dataLoading) {
+      setLoading(() => true);
+    } else {
+      setTimeout(() => setLoading(() => false), 1500);
+    }
+  }, [userLoading, dataLoading]);
 
   return (
     <AuthContext.Provider value={{ user, data, loading, error }}>
