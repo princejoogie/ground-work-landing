@@ -1,7 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo '🏗️👷 Styling, testing and building your project before committing'
+echo '🏗️👷 Styling and testing and your project before committing'
 
 # Check Prettier standards
 npm run check-format ||
@@ -26,12 +26,6 @@ npm run check-types ||
 
 # If everything passes... Now we can commit
 echo '✅ All checks passed.'
-
-npm run build ||
-    (
-        echo 'Next build failed: View the errors above to see why. '
-        false
-    )
 
 # If everything passes... Now we can commit
 echo '✏ Commiting your changes.'
