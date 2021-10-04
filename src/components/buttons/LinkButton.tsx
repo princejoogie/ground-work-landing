@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 type TargetType = '_self' | '_blank' | '_parent' | '_top';
 
-type RelType = 'noreferrer' | 'noopener' | 'nofollow' | 'opener';
+// type RelType = 'noreferrer' | 'noopener' | 'nofollow' | 'opener';
 
 interface LinkButtonProps {
   href: string;
   text: string;
   target?: TargetType;
-  rel?: RelType;
+  rel?: string;
   className?: string;
 }
 

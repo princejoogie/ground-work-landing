@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../../public/assets/images/logo1.png';
+import { LinkButton } from '../buttons';
 
 const steps = [
   {
@@ -10,7 +11,8 @@ const steps = [
         Create a <strong>Groundwork.PH</strong> account.
       </h4>
     ),
-    color: 'bg-yellow-100',
+    href: '/s',
+    ctaText: 'Create Account',
   },
   {
     Text: () => (
@@ -18,8 +20,8 @@ const steps = [
         <strong>Search</strong> for the needed resources for your business.
       </h4>
     ),
-
-    color: 'bg-purple-100',
+    href: '/s',
+    ctaText: 'Start shopping',
   },
   {
     Text: () => (
@@ -28,7 +30,8 @@ const steps = [
         around the country!
       </h4>
     ),
-    color: 'bg-blue-100',
+    href: '/s',
+    ctaText: 'Make transactions',
   },
 ];
 
@@ -56,30 +59,18 @@ const Testimonial = () => {
       </div>
       <div className=' my-28'>
         <h2 className='mb-5 home-headings'>YOU ONLY NEED TO</h2>
-        {/* <div className='flex flex-col w-full my-4 overflow-hidden font-semibold text-center rounded-xl md:rounded-full md:h-40 md:flex-row text-md lg:text-xl'>
-          {steps.map(({ text, color }, i) => (
+
+        <div className='grid grid-cols-1 overflow-hidden rounded-md md:grid-cols-3'>
+          {steps.map(({ Text, href, ctaText }, i) => (
             <div
               key={i}
-              className={`flex items-center justify-center w-full px-5 h-28 md:h-40 lg:px-16 md:w-1/3 ${color}`}
-            >
-              <h4>{text}</h4>
-            </div>
-          ))}
-        </div> */}
-        <div className='grid grid-cols-3 overflow-hidden rounded-md'>
-          {steps.map(({ Text, color }, i) => (
-            <div
-              key={i}
-              className={`flex flex-col justify-between items-start   py-8 px-6 border-solid border-blue-200 border-2`}
+              className={`flex flex-col justify-between items-start   py-8 px-6 `}
             >
               <div>
-                <h3 className='mb-1 text-xl font-bold'>{i + 1}</h3>
+                <h3 className='mb-1 text-xl font-bold'>{i + 1}.</h3>
                 <Text />
               </div>
-
-              <Link href=''>
-                <a>ASDASD</a>
-              </Link>
+              <LinkButton className='px-3 py-1 mt-5' href={href} text={ctaText} target='_blank' rel='noreferrer noopener'/>
             </div>
           ))}
         </div>
