@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
+
+import logo from "../../../public/assets/images/logo1.png";
 
 import { Container } from "@/components";
 import { useScroll } from "@/hooks";
@@ -53,22 +56,30 @@ const HomeNavbar = () => {
       ref={navRef}
       className="sticky z-50 py-4 transition-all duration-300 bg-white shadow"
     >
-      <Container>
+      <Container className="flex h-10 ">
         <div className="flex items-center space-x-4">
+          <Image
+            src={logo}
+            width={80}
+            height={80}
+            alt="Logo"
+            objectFit="contain"
+            objectPosition="center"
+          />
           <Link href="/">
-            <a className="text-xl font-bold uppercase text-primary">
+            <a className="items-center hidden text-lg font-bold uppercase md:text-xl sm:block text-primary">
               Ground<span className="text-secondary">Work.</span>PH
             </a>
           </Link>
 
-          <div className="flex items-center">
+          <div className="items-center hidden md:flex">
             {links.map(({ name, href }) => {
               const active = router.pathname === href;
               return (
                 <Link key={href} href={href}>
                   <a
-                    className={`px-6 text-sm text-black py-1 rounded-full ${
-                      active && "bg-[#E7D6F9]"
+                    className={`px-6 text-sm text-black py-1 rounded-full mr-2 bg-[#E7D6F9] ${
+                      active && "bg-primary"
                     }`}
                   >
                     {name}

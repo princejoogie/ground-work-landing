@@ -14,3 +14,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@layer components {
+  .home-headings {
+    @apply text-3xl font-bold text-center;
+  }
+}

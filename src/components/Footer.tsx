@@ -1,5 +1,45 @@
 import React from "react";
+import { FaFacebook, FaPinterest } from "react-icons/fa";
+import {
+  AiFillTwitterCircle,
+  AiFillYoutube,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { TiSocialTumblerCircular } from "react-icons/ti";
 import { Container } from "@/components";
+
+const socialIcons = [
+  {
+    name: "Facebook",
+    Icon: FaFacebook,
+    link: "#",
+  },
+  {
+    name: "Instagram",
+    Icon: AiFillInstagram,
+    link: "#",
+  },
+  {
+    name: "Twitter",
+    Icon: AiFillTwitterCircle,
+    link: "#",
+  },
+  {
+    name: "Youtube",
+    Icon: AiFillYoutube,
+    link: "#",
+  },
+  {
+    name: "Pinterest",
+    Icon: FaPinterest,
+    link: "#",
+  },
+  {
+    name: "Tumbler",
+    Icon: TiSocialTumblerCircular,
+    link: "#",
+  },
+];
 
 const Footer = () => {
   return (
@@ -41,10 +81,33 @@ const Footer = () => {
               <a href="#">Contact Us</a>
             </div>
           </div>
-        </div>
 
-        {/* Socials */}
-        <div />
+          {/* Socials */}
+          <div>
+            <h3 className="text-xl font-bold uppercase">Follow Us</h3>
+            <ul className="mt-4">
+              {socialIcons.map(({ name, Icon, link }) => (
+                <li key={name}>
+                  <a
+                    href={link}
+                    className="flex items-center justify-center mb-2 text-xs md:justify-start"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <Icon className="w-6 h-6 mr-1" />
+                    <span>{name}</span>
+                  </a>
+                </li>
+              ))}
+              {/* <li>
+                <a href='' className='flex items-center justify-center text-xs'>
+                  <FaFacebook className='w-6 h-6 mr-1' />
+                  <span>Facebook</span>
+                </a>
+              </li> */}
+            </ul>
+          </div>
+        </div>
       </Container>
     </footer>
   );

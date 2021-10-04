@@ -1,8 +1,15 @@
 import React from "react";
 import type { NextPage } from "next";
 import styles from "@styles/home.module.css";
-
-import { Container, HomeLayout } from "@/components";
+import {
+  Container,
+  HomeLayout,
+  HowToUse,
+  Partners,
+  SignupSection,
+  Testimonial,
+} from "@/components";
+import { LinkButton } from "@/components/buttons";
 
 const Index: NextPage = () => {
   return (
@@ -13,12 +20,11 @@ const Index: NextPage = () => {
       <div className="relative">
         <div className={styles.bgImage} />
 
-        <Container className="relative flex flex-col py-32 lg:flex-row">
-          <div className="flex flex-col items-start w-full space-y-8 md:w-1/3">
-            <h1 className="text-3xl font-bold uppercase lg:text-5xl">
+        <Container className="relative flex flex-col items-center py-32 lg:items-start lg:flex-row">
+          <div className="flex flex-col items-center justify-center w-full space-y-8 text-center lg:text-left lg:items-start md:w-1/3">
+            <h1 className="text-3xl font-bold uppercase md:text-5xl">
               <span className="text-secondary">Groundwork</span>
-              <br />
-              <span className="text-primary">Philippines</span>
+              <span className="text-primary"> Philippines</span>
             </h1>
 
             <p className="text-sm lg:text-base">
@@ -26,26 +32,38 @@ const Index: NextPage = () => {
               business establishments in the country!
             </p>
 
-            <button
-              type="button"
-              className="px-6 py-2 text-xs font-semibold uppercase transition-colors duration-300 border-2 border-black rounded-full lg:text-base hover:text-white hover:bg-black"
-            >
-              Learn More
-            </button>
+            <LinkButton href="#" text="Learn more" />
           </div>
 
-          <div className="w-2/3" />
+          <div className="mt-10 lg:mt-0 2/3">
+            <div className="w-4/5 mx-auto lg:ml-auto lg:mx-0">
+              <video
+                controls
+                autoPlay
+                src="/assets/videos/home/home_video.mp4"
+              />
+            </div>
+          </div>
         </Container>
       </div>
 
       <div className="flex flex-col mt-8">
-        {/* <div className="w-1/2">
-          <video src="/assets/home_video.mp4" autoPlay></video>
-        </div> */}
-        <Container>
-          <h1>Home</h1>
+        <Container className="h-auto pt-20">
+          <HowToUse />
         </Container>
       </div>
+
+      <Container>
+        <Testimonial />
+      </Container>
+
+      <Container className="py-10 md:py-16">
+        <Partners />
+      </Container>
+
+      <Container className="">
+        <SignupSection />
+      </Container>
     </HomeLayout>
   );
 };
