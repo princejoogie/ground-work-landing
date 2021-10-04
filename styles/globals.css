@@ -33,4 +33,24 @@ body {
   .home-headings {
     @apply text-3xl font-bold text-center;
   }
+
+  .about-headings {
+    @apply relative mb-12 text-4xl font-bold text-center;
+  }
+
+  .underlined {
+    @apply absolute w-10 h-1 -ml-6 bg-black mt-7 inset-1/2;
+  }
+}
+
+.underlined-headings {
+  position: relative;
+
+  ::after {
+    content: "asdad";
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: black;
+  }
 }
