@@ -1,18 +1,33 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import logo from '../../../public/assets/images/logo1.png';
 
 const steps = [
   {
-    text: 'Create a Groundwork.PH account.',
+    Text: () => (
+      <h4>
+        Create a <strong>Groundwork.PH</strong> account.
+      </h4>
+    ),
     color: 'bg-yellow-100',
   },
   {
-    text: 'Search for the needed resources for your business.',
+    Text: () => (
+      <h4>
+        <strong>Search</strong> for the needed resources for your business.
+      </h4>
+    ),
+
     color: 'bg-purple-100',
   },
   {
-    text: 'Select and begin your transactions with Suppliers around the country!',
+    Text: () => (
+      <h4>
+        <strong>Select and begin</strong> your transactions with suppliers
+        around the country!
+      </h4>
+    ),
     color: 'bg-blue-100',
   },
 ];
@@ -39,15 +54,32 @@ const Testimonial = () => {
           </h4>
         </div>
       </div>
-      <div className='my-28'>
-        <h2 className='home-headings'>YOU ONLY NEED TO</h2>
-        <div className='flex flex-col w-full my-4 overflow-hidden font-semibold text-center rounded-xl md:rounded-full md:h-40 md:flex-row text-md lg:text-xl'>
+      <div className=' my-28'>
+        <h2 className='mb-5 home-headings'>YOU ONLY NEED TO</h2>
+        {/* <div className='flex flex-col w-full my-4 overflow-hidden font-semibold text-center rounded-xl md:rounded-full md:h-40 md:flex-row text-md lg:text-xl'>
           {steps.map(({ text, color }, i) => (
             <div
               key={i}
               className={`flex items-center justify-center w-full px-5 h-28 md:h-40 lg:px-16 md:w-1/3 ${color}`}
             >
               <h4>{text}</h4>
+            </div>
+          ))}
+        </div> */}
+        <div className='grid grid-cols-3 overflow-hidden rounded-md'>
+          {steps.map(({ Text, color }, i) => (
+            <div
+              key={i}
+              className={`flex flex-col justify-between items-start   py-8 px-6 border-solid border-blue-200 border-2`}
+            >
+              <div>
+                <h3 className='mb-1 text-xl font-bold'>{i + 1}</h3>
+                <Text />
+              </div>
+
+              <Link href=''>
+                <a>ASDASD</a>
+              </Link>
             </div>
           ))}
         </div>

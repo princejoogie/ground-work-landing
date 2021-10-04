@@ -1,3 +1,4 @@
+
 import type { NextPage } from 'next';
 import {
   Container,
@@ -9,6 +10,9 @@ import {
 } from '@/components';
 import { LinkButton } from '@/components/buttons';
 import styles from '@styles/home.module.css';
+
+
+
 
 const Index: NextPage = () => {
   return (
@@ -43,6 +47,7 @@ const Index: NextPage = () => {
               ></video>
             </div>
           </div>
+
         </Container>
       </div>
 

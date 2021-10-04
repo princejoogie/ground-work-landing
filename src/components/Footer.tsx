@@ -82,6 +82,7 @@ const Footer = () => {
             </div>
           </div>
 
+
           {/* Socials */}
           <div>
             <h3 className='text-xl font-bold uppercase'>Follow Us</h3>
@@ -108,6 +109,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
       </Container>
     </footer>
   );

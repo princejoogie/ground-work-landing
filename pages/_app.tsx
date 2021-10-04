@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/globals.css";
 import "nprogress/nprogress.css";
 import type { AppProps } from "next/app";
@@ -11,7 +12,7 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <AnimatePresence initial={false} exitBeforeEnter={true}>
+    <AnimatePresence initial={false} exitBeforeEnter>
       <Component {...pageProps} key={router.route} />;
     </AnimatePresence>
   );

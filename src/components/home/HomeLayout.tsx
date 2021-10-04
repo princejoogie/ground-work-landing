@@ -1,8 +1,10 @@
-import React from 'react';
-import { NextSeo, NextSeoProps } from 'next-seo';
 
-import { Footer, HomeNavbar } from '@/components';
-import { motion } from 'framer-motion';
+import React from "react";
+import { NextSeo, NextSeoProps } from "next-seo";
+import { motion } from "framer-motion";
+
+import { Footer, HomeNavbar } from "@/components";
+
 
 const variants = {
   hidden: { opacity: 0 },
