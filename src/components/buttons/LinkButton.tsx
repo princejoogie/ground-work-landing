@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-type TargetType = '_self' | '_blank' | '_parent' | '_top';
+type TargetType = "_self" | "_blank" | "_parent" | "_top";
 
 // type RelType = 'noreferrer' | 'noopener' | 'nofollow' | 'opener';
 
