@@ -16,9 +16,9 @@ const SignUp: NextPage = () => {
       <div className="flex flex-col mt-8">
         <Container className="pb-16">
           <AnimatePresence>
-            {step === 1 && <Step1 setStep={setStep} />}
-            {step === 2 && <Step2 setStep={setStep} />}
-            {step === 3 && <Step3 setStep={setStep} />}
+            {step === 1 && <Step1 setStep={setStep} step={step} />}
+            {step === 2 && <Step2 setStep={setStep} step={step} />}
+            {step === 3 && <Step3 setStep={setStep} step={step} />}
           </AnimatePresence>
         </Container>
       </div>
