@@ -53,7 +53,7 @@ const Team = () => {
         return (
           <div
             key={name}
-            className={`flex flex-col p-3 ${
+            className={`flex flex-col p-3 mx-auto md:mx-0 ${
               imgPos ? "place-self-end" : "place-self-start"
             } overflow-hidden w-72 md:w-96`}
           >
