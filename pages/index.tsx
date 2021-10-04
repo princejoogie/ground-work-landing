@@ -1,6 +1,8 @@
+import React from "react";
 import type { NextPage } from "next";
-import { Container, HomeLayout } from "@/components";
 import styles from "@styles/home.module.css";
+
+import { Container, HomeLayout } from "@/components";
 
 const Index: NextPage = () => {
   return (
@@ -24,12 +26,15 @@ const Index: NextPage = () => {
               business establishments in the country!
             </p>
 
-            <button className="px-6 py-2 text-xs font-semibold uppercase transition-colors duration-300 border-2 border-black rounded-full lg:text-base hover:text-white hover:bg-black">
+            <button
+              type="button"
+              className="px-6 py-2 text-xs font-semibold uppercase transition-colors duration-300 border-2 border-black rounded-full lg:text-base hover:text-white hover:bg-black"
+            >
               Learn More
             </button>
           </div>
 
-          <div className="w-2/3"></div>
+          <div className="w-2/3" />
         </Container>
       </div>
 
