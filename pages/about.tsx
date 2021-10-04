@@ -1,6 +1,12 @@
 import React from "react";
 import type { NextPage } from "next";
 import { Container, HomeLayout } from "@/components";
+import {
+  Clients,
+  CompanyBackground,
+  Main,
+  MissionVision,
+} from "@/components/about";
 
 const About: NextPage = () => {
   return (
@@ -10,7 +16,10 @@ const About: NextPage = () => {
     >
       <div className="flex flex-col mt-8">
         <Container>
-          <h1>About</h1>
+          <Main />
+          <MissionVision />
+          <CompanyBackground />
+          <Clients />
         </Container>
       </div>
     </HomeLayout>
