@@ -44,14 +44,18 @@ const team = [
 
 const Team = () => {
   return (
-    <div className="grid w-full grid-cols-1 sm:grid-cols-2 sm:gap-5">
-      {team.map((member) => {
+    <div className="grid w-full grid-cols-1 mb-20 sm:grid-cols-2 sm:gap-20">
+      {team.map((member, i) => {
         const { pos, name, image, fb, twitter, linkedin } = member;
+
+        const imgPos = i % 2 === 0;
 
         return (
           <div
             key={name}
-            className="flex flex-col items-center p-3 mx-auto overflow-hidden w-72 md:w-96"
+            className={`flex flex-col p-3 ${
+              imgPos ? "place-self-end" : "place-self-start"
+            } overflow-hidden w-72 md:w-96`}
           >
             <div className="relative w-full h-72 md:h-96">
               <Image

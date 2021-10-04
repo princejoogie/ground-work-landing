@@ -15,7 +15,10 @@ const Slideshow = () => {
       <Slide duration={300} slidesToShow={3} indicators arrows={false}>
         {images.map((image) => {
           return (
-            <div className="relative w-32 h-32 overflow-hidden rounded-full md:w-60 md:h-60">
+            <div
+              key={image}
+              className="relative w-32 h-32 overflow-hidden rounded-full md:w-60 md:h-60"
+            >
               <Image
                 src={image}
                 layout="fill"

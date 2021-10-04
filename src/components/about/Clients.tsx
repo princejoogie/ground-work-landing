@@ -39,7 +39,7 @@ const Clients = () => {
       </h2>
       <div className="flex justify-evenly">
         {clients.map(({ image, alt }) => (
-          <div className="relative">
+          <div key={alt} className="relative">
             <Image
               src={image}
               alt={`${alt} Logo`}
