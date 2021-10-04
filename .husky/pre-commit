@@ -3,6 +3,9 @@
 
 echo '🏗️👷 Styling and testing and your project before committing'
 
+echo '✏ Formatting your code...'
+npm run format
+
 # Check Prettier standards
 npm run check-format ||
     (
