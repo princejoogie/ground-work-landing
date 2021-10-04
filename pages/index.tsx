@@ -53,17 +53,13 @@ const Index: NextPage = () => {
         </Container>
       </div>
 
-      <Container>
-        <Testimonial />
-      </Container>
+      <Testimonial />
 
       <Container className="py-10 md:py-16">
         <Partners />
       </Container>
 
-      <Container className="">
-        <SignupSection />
-      </Container>
+      <SignupSection />
     </HomeLayout>
   );
 };
