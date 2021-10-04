@@ -76,7 +76,7 @@ const HomeNavbar = () => {
             {links.map(({ name, href }) => {
               const active = router.pathname === href;
               return (
-                <Link key={href} href={href}>
+                <Link key={`link-${href}`} href={href}>
                   <a
                     className={`px-6 text-sm text-black py-1 rounded-full mr-2 bg-[#E7D6F9] ${
                       active && "bg-primary"
