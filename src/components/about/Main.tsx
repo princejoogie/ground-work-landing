@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import aboutImage from "../../../public/assets/images/about/about-image.jpg";
+
+const classHeader = "/assets/images/about/class-header.png";
 
 const Main = () => {
   return (
@@ -30,10 +31,10 @@ const Main = () => {
 
       <div className="relative h-52 md:h-80 lg:h-96">
         <Image
-          src={aboutImage}
+          src={classHeader}
           layout="fill"
           quality={30}
-          objectFit="cover"
+          objectFit="contain"
           objectPosition="center"
         />
       </div>

@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { Slide } from "react-slideshow-image";
-import girl from "../../../public/assets/images/about/slideshow/girl.jpg";
-import desert from "../../../public/assets/images/about/slideshow/desert.jpg";
-import leaves from "../../../public/assets/images/about/slideshow/leaves.jpg";
-import building from "../../../public/assets/images/about/slideshow/building.jpg";
+
+const girl = "/assets/images/about/slideshow/girl.jpg";
+const desert = "/assets/images/about/slideshow/desert.jpg";
+const leaves = "/assets/images/about/slideshow/leaves.jpg";
+const building = "/assets/images/about/slideshow/building.jpg";
 
 const images = [girl, desert, leaves, building];
 

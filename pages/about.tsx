@@ -6,6 +6,7 @@ import {
   CompanyBackground,
   Main,
   MissionVision,
+  Team,
 } from "@/components/about";
 
 const About: NextPage = () => {
@@ -18,10 +19,15 @@ const About: NextPage = () => {
         <Container>
           <Main />
           <MissionVision />
-          <CompanyBackground />
-          <Clients />
         </Container>
       </div>
+
+      <CompanyBackground />
+
+      <Container>
+        <Team />
+        <Clients />
+      </Container>
     </HomeLayout>
   );
 };

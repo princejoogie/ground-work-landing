@@ -1,54 +1,58 @@
 import React from "react";
 import Image from "next/image";
-import talo from "../../../public/assets/images/about/clients/talo.png";
-import solidState from "../../../public/assets/images/about/clients/solid-state.png";
-import noted from "../../../public/assets/images/about/clients/noted.png";
-import goan from "../../../public/assets/images/about/clients/goan.png";
-import mowi from "../../../public/assets/images/about/clients/mowi.png";
 
-interface PartnersProps {}
+const talo = "/assets/images/about/clients/talo.png";
+const solidState = "/assets/images/about/clients/solid-state.png";
+const noted = "/assets/images/about/clients/noted.png";
+const goan = "/assets/images/about/clients/goan.png";
+const mowi = "/assets/images/about/clients/mowi.png";
 
-const Partners: React.FC<PartnersProps> = () => {
+const clients = [
+  {
+    image: talo,
+    alt: "Talo",
+  },
+  {
+    image: solidState,
+    alt: "Solid State",
+  },
+  {
+    image: noted,
+    alt: "Noted",
+  },
+  {
+    image: goan,
+    alt: "Goan",
+  },
+  {
+    image: mowi,
+    alt: "Mowi",
+  },
+];
+
+const Clients = () => {
   return (
     <div className="mb-10">
       <h2 className="about-headings">
         OUR CLIENTS
         <span className="underlined" />
       </h2>
-      <div className="relative flex justify-center h-32">
-        <Image
-          src={talo}
-          alt="Talo Logo"
-          objectFit="contain"
-          objectPosition="center"
-        />
-        <Image
-          src={solidState}
-          alt="Solid State Logo"
-          objectFit="contain"
-          objectPosition="center"
-        />
-        <Image
-          src={noted}
-          alt="Noted Logo"
-          objectFit="contain"
-          objectPosition="center"
-        />
-        <Image
-          src={goan}
-          alt="Goan Logo"
-          objectFit="contain"
-          objectPosition="center"
-        />
-        <Image
-          src={mowi}
-          alt="Mowi Logo"
-          objectFit="contain"
-          objectPosition="center"
-        />
+      <div className="flex justify-evenly">
+        {clients.map(({ image, alt }) => (
+          <div className="relative">
+            <Image
+              src={image}
+              alt={`${alt} Logo`}
+              width={150}
+              height={150}
+              objectFit="contain"
+              objectPosition="center"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Partners;
+export default Clients;
