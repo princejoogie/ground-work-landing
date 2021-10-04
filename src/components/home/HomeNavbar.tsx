@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-import logo from '../../../public/assets/logo1.png';
+import logo from '../../../public/assets/images/logo1.png';
 
 import { Container } from '@/components';
 import { useScroll } from '@/hooks';

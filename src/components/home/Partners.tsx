@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import infoData from '../../../public/assets/partners/info-data.png';
-import leadersChoice from '../../../public/assets/partners/leaders-choice.png';
-import statKings from '../../../public/assets/partners/stat-kings.png';
-import upPrime from '../../../public/assets/partners/up-prime.png';
+import infoData from '../../../public/assets/images/home/partners/info-data.png';
+import leadersChoice from '../../../public/assets/images/home/partners/leaders-choice.png';
+import statKings from '../../../public/assets/images/home/partners/stat-kings.png';
+import upPrime from '../../../public/assets/images/home/partners/up-prime.png';
 
 interface PartnersProps {}
 

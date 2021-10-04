@@ -10,7 +10,11 @@ const SignupSection = () => {
         className='absolute top-0 left-0 w-full h-full overflow-hidden'
       >
         <video className='object-cover w-full h-full' autoPlay muted loop>
-          <source src='/assets/home-bg-video.mp4' type='video/mp4' /> supported!
+          <source
+            src='/assets/videos/home/home-bg-video.mp4'
+            type='video/mp4'
+          />{' '}
+          supported!
         </video>
       </div>
       <div className='flex flex-col items-center justify-center px-10 py-20 md:py-24 lg:py-32 z-99'>

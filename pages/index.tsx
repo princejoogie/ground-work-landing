@@ -36,7 +36,11 @@ const Index: NextPage = () => {
 
           <div className='mt-10 lg:mt-0 2/3'>
             <div className='w-4/5 mx-auto lg:ml-auto lg:mx-0'>
-              <video controls autoPlay src='/assets/home_video.mp4'></video>
+              <video
+                controls
+                autoPlay
+                src='/assets/videos/home/home_video.mp4'
+              ></video>
             </div>
           </div>
         </Container>
