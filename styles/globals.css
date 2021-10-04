@@ -5,10 +5,6 @@
 @tailwind utilities;
 
 @layer components {
-  .input {
-    @apply border-2 border-[#ccc] h-[40px] px-[20px] rounded-lg outline-none w-full primary-ring cursor-pointer;
-  }
-
   .primary-ring {
     @apply focus:ring focus:ring-primary transition-all duration-200;
   }
