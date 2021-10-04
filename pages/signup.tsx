@@ -3,9 +3,7 @@ import { AnimatePresence } from "framer-motion";
 
 import type { NextPage } from "next";
 import { Container, HomeLayout } from "@/components";
-import Step1 from "@/components/signup/Step1";
-import Step2 from "@/components/signup/Step2";
-import Step3 from "@/components/signup/Step3";
+import { Step1, Step2, Step3 } from "@/components/signup";
 
 const SignUp: NextPage = () => {
   const [step, setStep] = useState(1);
