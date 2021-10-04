@@ -42,6 +42,7 @@ const Testimonial = () => {
           <Image
             src={logo}
             alt="Logo"
+            quality={30}
             layout="fill"
             objectFit="contain"
             objectPosition="center"
