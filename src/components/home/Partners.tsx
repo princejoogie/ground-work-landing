@@ -11,7 +11,7 @@ const Partners: React.FC<PartnersProps> = () => {
   return (
     <div className=''>
       <h2 className='home-headings'>OUR PARTNERS</h2>
-      <div className='relative flex h-60'>
+      <div className='relative flex justify-center h-60'>
         <Image
           src={leadersChoice}
           alt='Leaders Choice Logo'

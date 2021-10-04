@@ -7,7 +7,7 @@ const SignupSection = () => {
     <section style={{ zIndex: 1 }} className='relative h-96 md:h-auto'>
       <div
         style={{ zIndex: -1 }}
-        className='absolute top-0 left-0 h-full overflow-hidden'
+        className='absolute top-0 left-0 w-full h-full overflow-hidden'
       >
         <video className='object-cover w-full h-full' autoPlay muted loop>
           <source src='/assets/home-bg-video.mp4' type='video/mp4' /> supported!
