@@ -2,6 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 import logo from '../../../public/assets/logo1.png';
 
+const steps = [
+  {
+    text: 'Create a Groundwork.PH account.',
+    color: 'bg-yellow-100',
+  },
+  {
+    text: 'Search for the needed resources for your business.',
+    color: 'bg-purple-100',
+  },
+  {
+    text: 'Select and begin your transactions with Suppliers around the country!',
+    color: 'bg-blue-100',
+  },
+];
+
 const Testimonial = () => {
   return (
     <section className='w-full h-auto'>
@@ -10,8 +25,6 @@ const Testimonial = () => {
           <Image
             src={logo}
             alt='Logo'
-            // width={400}
-            // height={400}
             layout='fill'
             objectFit='contain'
             objectPosition='center'
@@ -29,18 +42,14 @@ const Testimonial = () => {
       <div className='my-28'>
         <h2 className='home-headings'>YOU ONLY NEED TO</h2>
         <div className='flex flex-col w-full my-4 overflow-hidden font-semibold text-center rounded-xl md:rounded-full md:h-40 md:flex-row text-md lg:text-xl'>
-          <div className='flex items-center justify-center w-full h-40 px-16 bg-yellow-100 md:p-0 md:w-1/3 '>
-            <h4>Create a Groundwork.PH account.</h4>
-          </div>
-          <div className='flex items-center justify-center w-full h-40 px-16 bg-purple-100 md:w-1/3 md:p-0'>
-            <h4>Search for the needed resources for your business.</h4>
-          </div>
-          <div className='flex items-center w-full h-40 px-16 bg-blue-100 md:w-1/3 md:p-0'>
-            <h4>
-              Select and begin your transactions with Suppliers around the
-              country!
-            </h4>
-          </div>
+          {steps.map(({ text, color }, i) => (
+            <div
+              key={i}
+              className={`flex items-center justify-center w-full px-5 h-28 md:h-40 lg:px-16 md:w-1/3 ${color}`}
+            >
+              <h4>{text}</h4>
+            </div>
+          ))}
         </div>
       </div>
     </section>
