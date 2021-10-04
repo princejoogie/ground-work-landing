@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         {/* Socials */}
-        <div></div>
+        <div />
       </Container>
     </footer>
   );
