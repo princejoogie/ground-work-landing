@@ -1,6 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import { Container, HomeLayout } from "@/components";
+import ServicesPage from "@/components/services";
 
 const Services: NextPage = () => {
   return (
@@ -10,7 +11,7 @@ const Services: NextPage = () => {
     >
       <div className="flex flex-col mt-8">
         <Container>
-          <h1>Services</h1>
+          <ServicesPage />
         </Container>
       </div>
     </HomeLayout>
