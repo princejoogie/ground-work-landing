@@ -8,10 +8,10 @@ interface BlueCircleProps {
 const CurrentStepCircle = ({ num, desc }: BlueCircleProps) => {
   return (
     <div className="grid place-items-center">
-      <div className="bg-secondary rounded-full h-10 w-10 grid place-items-center mb-2">
+      <div className="bg-secondary step-circle">
         <p className="text-primary font-semibold">{num}</p>
       </div>
-      <p className="text-secondary font-semibold">{desc}</p>
+      <p className="text-sm text-secondary font-semibold">{desc}</p>
     </div>
   );
 };
@@ -24,10 +24,10 @@ interface GrayCircleProps {
 const StepCircle = ({ num, desc }: GrayCircleProps) => {
   return (
     <div className="grid place-items-center">
-      <div className="rounded-full border-[3px] border-[#ddd] h-10 w-10 grid place-items-center mb-2">
+      <div className="border-[3px] border-[#ddd] step-circle">
         <p className="text-[#ccc] font-semibold">{num}</p>
       </div>
-      <p className="text-secondary font-medium">{desc}</p>
+      <p className="text-sm text-secondary font-medium">{desc}</p>
     </div>
   );
 };

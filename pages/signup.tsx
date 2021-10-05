@@ -19,9 +19,9 @@ const SignUp: NextPage = () => {
       <div className="min-h-screen bg-gray-100">
         <Container className="flex flex-col min-h-screen py-10 ">
           <AnimatePresence>
-            {step === 1 && <Step1 setStep={setStep} />}
-            {step === 2 && <Step2 setStep={setStep} />}
-            {step === 3 && <Step3 setStep={setStep} />}
+            {step === 1 && <Step1 setStep={setStep} step={step} />}
+            {step === 2 && <Step2 setStep={setStep} step={step} />}
+            {step === 3 && <Step3 setStep={setStep} step={step} />}
           </AnimatePresence>
         </Container>
       </div>
