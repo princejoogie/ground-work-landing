@@ -1,6 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import { Container, HomeLayout } from "@/components";
+import ContactForm from "@/components/contact/ContactForm";
 
 const Contact: NextPage = () => {
   return (
@@ -9,8 +10,21 @@ const Contact: NextPage = () => {
       description="An online B2B platform designed to create and gather networks for business establishments in the country!"
     >
       <div className="flex flex-col mt-8">
-        <Container>
-          <h1>Contact</h1>
+        <Container className="py-10">
+          <h2 className="text-3xl about-headings md:text-5xl">
+            CONTACT
+            <span className="underlined" />
+          </h2>
+          <p
+            style={{ maxWidth: "700px" }}
+            className="mx-auto mb-20 text-center"
+          >
+            Don&apos;t hesitate to reach out to us! Send in all your inquirers,
+            queries or concerns and we will do our best to reply as soon as we
+            can. Thank you very much!
+          </p>
+
+          <ContactForm />
         </Container>
       </div>
     </HomeLayout>
