@@ -101,7 +101,7 @@ const ContactForm = () => {
                 rel="noreferrer noopener"
               >
                 <FaFacebookF className="w-5 h-5 mr-1" />
-                Facebook
+                @facebook_username
               </a>
             </li>
             <li className="mb-2">
@@ -112,7 +112,7 @@ const ContactForm = () => {
                 rel="noreferrer noopener"
               >
                 <FaTwitter className="w-5 h-5 mr-1" />
-                Twitter
+                @twitter_username
               </a>
             </li>
             <li className="mb-2">
@@ -123,7 +123,7 @@ const ContactForm = () => {
                 rel="noreferrer noopener"
               >
                 <FaLinkedinIn className="w-5 h-5 mr-1" />
-                Facebook
+                @linkedin_username
               </a>
             </li>
             <li className="mb-2">
@@ -134,7 +134,7 @@ const ContactForm = () => {
                 rel="noreferrer noopener"
               >
                 <AiFillInstagram className="w-5 h-5 mr-1" />
-                Facebook
+                @instagram_username
               </a>
             </li>
           </ul>
