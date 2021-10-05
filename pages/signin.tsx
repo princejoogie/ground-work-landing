@@ -20,7 +20,7 @@ const Home: NextPage = () => {
               <p>groundwork.ph</p>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col sm:w-[400px] mx-auto">
               <ProviderButton signIn auth="Facebook" Icon={FaFacebook} />
               <ProviderButton signIn auth="Google" Icon={FaGoogle} />
               <ProviderButton signIn auth="Yahoo" Icon={FaYahoo} />

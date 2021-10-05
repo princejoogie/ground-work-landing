@@ -19,10 +19,10 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
   return (
     <form
       spellCheck="false"
-      className="flex flex-col items-center flex-1 w-full max-w-2xl pb-8 mx-auto bg-white shadow-xl rounded-2xl"
+      className="bg-white rounded-2xl flex flex-col items-center w-[95%] md:w-[600px] mx-auto min-h-screen pb-8 shadow-xl"
     >
-      <div className="flex flex-col items-center w-full py-8 border-b border-gray-300">
-        <h1 className="mb-8 text-2xl font-bold md:text-3xl text-secondary">
+      <div className="w-full flex flex-col items-center py-8 shadow-lg rounded-b-lg">
+        <h1 className="font-bold text-2xl md:text-3xl text-secondary mb-8">
           {title}
         </h1>
 
@@ -53,12 +53,12 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
         </div>
       </div>
 
-      <div className="w-[90%] flex-1 sm:w-[70%] mt-8 flex flex-col">
-        <div className="flex-1">{children}</div>
+      <div className="w-[90%] sm:w-[70%] mt-8 flex flex-col">
+        {children}
 
         <button
           onClick={proceed}
-          className="bg-secondary mb-4 text-white rounded-lg text-center p-3 text-sm md:text-base primary-ring w-[100%] hover:bg-opacity-90 mt-10"
+          className="bg-secondary mb-4 text-white rounded-lg text-center p-3 text-sm md:text-base primary-ring w-[100%] hover:bg-opacity-90 mt-16"
           type="button"
         >
           Proceed
