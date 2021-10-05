@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
-import { Container } from "@/components";
+import { Container, Footer } from "@/components";
 import { Step1, Step2, Step3 } from "@/components/signup";
 
 const SignUp: NextPage = () => {
@@ -25,6 +25,7 @@ const SignUp: NextPage = () => {
           </AnimatePresence>
         </Container>
       </div>
+      <Footer />
     </>
   );
 };

@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           <section className="mt-16 bg-white shadow-xl py-8 md:px-8 px-3 text-center rounded-2xl w-[95%] md:w-[600px]">
             <div className="text-secondary mb-12">
               <h1 className="font-bold text-2xl md:text-3xl">Sign In</h1>
-              <p>groundwork.ph</p>
+              <p>login to your groundwork account</p>
             </div>
 
             <div className="flex flex-col sm:w-[400px] mx-auto">
