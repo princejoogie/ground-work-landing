@@ -7,14 +7,18 @@ interface SignUpFormProps {
   children: React.ReactNode;
   title: string;
   step: number;
-  proceed: () => void;
+  move: React.Dispatch<React.SetStateAction<number>>;
+  proceed: number;
+  back: number;
 }
 
 const SignUpForm: React.FC<SignUpFormProps> = ({
   children,
   title,
   step,
+  move,
   proceed,
+  back,
 }) => {
   return (
     <form
@@ -56,13 +60,22 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
       <div className="w-[90%] sm:w-[70%] mt-8 flex flex-col">
         {children}
 
-        <button
-          onClick={proceed}
-          className="bg-secondary mb-4 text-white rounded-lg text-center p-3 text-sm md:text-base primary-ring w-[100%] hover:bg-opacity-90 mt-16"
-          type="button"
-        >
-          Proceed
-        </button>
+        <div className="flex">
+          <button
+            onClick={() => move(back)}
+            className="bg-secondary mb-4 text-white rounded-lg text-center p-3 text-sm md:text-base primary-ring w-[100%] hover:bg-opacity-90 mr-4"
+            type="button"
+          >
+            Go Back
+          </button>
+          <button
+            onClick={() => move(proceed)}
+            className="bg-secondary mb-4 text-white rounded-lg text-center p-3 text-sm md:text-base primary-ring w-[100%] hover:bg-opacity-90"
+            type="button"
+          >
+            Proceed
+          </button>
+        </div>
 
         <p className="text-center text-secondary">
           Already Registered?
