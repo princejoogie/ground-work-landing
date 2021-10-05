@@ -24,7 +24,7 @@ const LoadingProvider: React.FC<LoadingProps> = ({
     };
   }, [dots]);
 
-  if (!loading) {
+  if (loading) {
     return (
       <div className="flex flex-col items-center justify-center w-full h-screen space-y-6">
         <SyncLoader color="#132D63" size={10} speedMultiplier={0.75} />
