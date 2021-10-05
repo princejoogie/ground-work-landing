@@ -19,9 +19,9 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       className="flex flex-col mx-auto sm:flex-row"
     >
-      <div className="flex flex-col w-full p-10 bg-gray-200 sm:w-3/5">
+      <div className="flex flex-col w-full p-10 bg-white shadow-md rounded-l-md sm:w-3/5">
         <h2 className="mb-5 text-3xl ">Get In Touch</h2>
-        <label htmlFor="first-name" className="font-medium">
+        <label htmlFor="first-name" className="font-medium text-gray-500">
           First Name
         </label>
         <input
@@ -33,7 +33,7 @@ const ContactForm = () => {
           id="first-name"
           required
         />
-        <label htmlFor="last-name" className="font-medium">
+        <label htmlFor="last-name" className="font-medium text-gray-500">
           Last Name
         </label>
         <input
@@ -45,7 +45,7 @@ const ContactForm = () => {
           id="last-name"
           required
         />
-        <label htmlFor="email" className="font-medium">
+        <label htmlFor="email" className="font-medium text-gray-500">
           Email
         </label>
         <input
@@ -57,7 +57,7 @@ const ContactForm = () => {
           id="email"
           required
         />
-        <label htmlFor="message" className="font-medium">
+        <label htmlFor="message" className="font-medium text-gray-500">
           Message
         </label>
         <textarea
@@ -73,7 +73,7 @@ const ContactForm = () => {
         </button>
       </div>
 
-      <div className="w-full p-10 text-center text-white sm:w-2/5 bg-secondary sm:text-left">
+      <div className="w-full p-10 text-center text-white shadow-md rounded-r-md bg-secondary sm:w-2/5 sm:text-left">
         <h2 className="mb-5 text-3xl ">Contact us</h2>
 
         <div className="mb-10">
