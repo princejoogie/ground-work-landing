@@ -9,11 +9,15 @@ import SignUpForm from "./SignUpForm";
 const Step1 = ({ setStep, step }: StepProps) => {
   return (
     <SignUpForm title="Join Groundwork!" step={step} proceed={() => setStep(2)}>
-      <Select label="I am a" choices={["Buyer", "Seller"]} />
+      <div>
+        <Select label="I am a" choices={["Buyer", "Seller"]} />
 
-      <ProviderButton auth="Facebook" Icon={FaFacebook} />
-      <ProviderButton auth="Google" Icon={FaGoogle} />
-      <ProviderButton auth="Yahoo" Icon={FaYahoo} />
+        <div className="flex flex-col">
+          <ProviderButton auth="Facebook" Icon={FaFacebook} />
+          <ProviderButton auth="Google" Icon={FaGoogle} />
+          <ProviderButton auth="Yahoo" Icon={FaYahoo} />
+        </div>
+      </div>
     </SignUpForm>
   );
 };
