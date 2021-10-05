@@ -5,9 +5,10 @@ interface ProviderProps {
   auth: string;
   action?: () => void;
   Icon: IconType;
+  signIn?: boolean;
 }
 
-const ProviderButton = ({ auth, action, Icon }: ProviderProps) => {
+const ProviderButton = ({ auth, action, Icon, signIn }: ProviderProps) => {
   return (
     <button
       onClick={action}
@@ -15,7 +16,9 @@ const ProviderButton = ({ auth, action, Icon }: ProviderProps) => {
       className="bg-secondary mb-4 text-white rounded-lg text-center md:text-center p-4 relative primary-ring hover:bg-opacity-90"
     >
       <Icon className="text-xl md:text-2xl text-primary absolute left-4" />
-      <p className="text-sm md:text-base">Sign Up with {auth}</p>
+      <p className="text-sm md:text-base">
+        Sign {signIn ? "In" : "Up"} with {auth}
+      </p>
     </button>
   );
 };

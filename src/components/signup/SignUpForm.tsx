@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 import { CurrentStepCircle, StepCircle } from "./StepCircle";
 
 interface SignUpFormProps {
@@ -17,7 +19,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
   return (
     <form
       spellCheck="false"
-      className="bg-white rounded-2xl flex flex-col items-center w-[95%] md:w-[600px] mx-auto min-h-screen pb-8"
+      className="bg-white rounded-2xl flex flex-col items-center w-[95%] md:w-[600px] mx-auto min-h-screen pb-8 shadow-xl"
     >
       <div className="w-full flex flex-col items-center py-8 shadow-lg rounded-b-lg">
         <h1 className="font-bold text-2xl md:text-3xl text-secondary mb-8">
@@ -61,6 +63,13 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
         >
           Proceed
         </button>
+
+        <p className="text-center text-secondary">
+          Already Registered?
+          <Link href="/signin">
+            <a className="font-semibold"> Sign In</a>
+          </Link>
+        </p>
       </div>
     </form>
   );
