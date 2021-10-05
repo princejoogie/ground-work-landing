@@ -28,7 +28,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
     >
       <div className="w-full flex flex-col items-center py-8 shadow-lg rounded-b-lg">
         <div className="text-center flex items-center justify-center mb-8 relative w-full">
-          {step === 1 || (
+          {step !== 1 && (
             <button
               type="button"
               onClick={() => move(back)}
