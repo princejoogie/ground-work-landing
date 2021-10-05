@@ -29,7 +29,7 @@ body {
   }
 
   .primary-ring {
-    @apply focus:ring focus:ring-primary transition-all duration-200;
+    @apply focus:ring-4 focus:ring-[#5D88FF] transition-all duration-200 ring-offset-2;
   }
 
   .step-circle {

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { BiArrowBack } from "react-icons/bi";
 
 import { CurrentStepCircle, StepCircle } from "./StepCircle";
 
@@ -7,24 +8,39 @@ interface SignUpFormProps {
   children: React.ReactNode;
   title: string;
   step: number;
-  proceed: () => void;
+  move: React.Dispatch<React.SetStateAction<number>>;
+  proceed: number;
+  back: number;
 }
 
 const SignUpForm: React.FC<SignUpFormProps> = ({
   children,
   title,
   step,
+  move,
   proceed,
+  back,
 }) => {
   return (
     <form
       spellCheck="false"
-      className="flex flex-col items-center flex-1 w-full max-w-2xl pb-8 mx-auto bg-white shadow-xl rounded-2xl"
+      className="bg-white rounded-2xl flex flex-col items-center w-[95%] md:w-[600px] mx-auto min-h-screen pb-8 shadow-xl"
     >
-      <div className="flex flex-col items-center w-full py-8 border-b border-gray-300">
-        <h1 className="mb-8 text-2xl font-bold md:text-3xl text-secondary">
-          {title}
-        </h1>
+      <div className="w-full flex flex-col items-center py-8 shadow-lg rounded-b-lg">
+        <div className="text-center flex items-center justify-center mb-8 relative w-full">
+          {step !== 1 && (
+            <button
+              type="button"
+              onClick={() => move(back)}
+              className="sm:text-3xl text-xl absolute left-8"
+            >
+              <BiArrowBack />
+            </button>
+          )}
+          <h1 className="font-bold text-2xl md:text-3xl text-secondary">
+            {title}
+          </h1>
+        </div>
 
         <div className="flex justify-between w-[90%] sm:w-[70%]">
           {step === 1 && (
@@ -53,12 +69,12 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
         </div>
       </div>
 
-      <div className="w-[90%] flex-1 sm:w-[70%] mt-8 flex flex-col">
-        <div className="flex-1">{children}</div>
+      <div className="w-[90%] sm:w-[70%] mt-8 flex flex-col">
+        {children}
 
         <button
-          onClick={proceed}
-          className="bg-secondary mb-4 text-white rounded-lg text-center p-3 text-sm md:text-base primary-ring w-[100%] hover:bg-opacity-90 mt-10"
+          onClick={() => move(proceed)}
+          className="bg-secondary mb-4 text-white rounded-lg text-center p-3 text-sm md:text-base primary-ring w-[100%] hover:bg-opacity-90"
           type="button"
         >
           Proceed

@@ -9,7 +9,9 @@ const Step2 = ({ setStep, step }: StepProps) => {
     <SignUpForm
       title="Fill in Your Basic Info"
       step={step}
-      proceed={() => setStep(3)}
+      move={setStep}
+      proceed={3}
+      back={1}
     >
       <Input label="First Name" />
       <Input label="Last Name" />
