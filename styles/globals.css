@@ -27,6 +27,14 @@ body {
   .underlined {
     @apply absolute w-10 h-1 -ml-6 bg-black mt-7 inset-1/2;
   }
+
+  .primary-ring {
+    @apply focus:ring focus:ring-primary transition-all duration-200;
+  }
+
+  .step-circle {
+    @apply rounded-full md:h-10 md:w-10 h-8 w-8 text-sm grid place-items-center mb-2;
+  }
 }
 
 .underlined-headings {

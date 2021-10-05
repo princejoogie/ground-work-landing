@@ -27,7 +27,7 @@ const LoadingProvider: React.FC<LoadingProps> = ({
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center w-full h-screen space-y-6">
-        <SyncLoader color="#132D63" speedMultiplier={0.75} />
+        <SyncLoader color="#132D63" size={10} speedMultiplier={0.75} />
         <p className="text-xs text-gray-500">
           {message} {dots}
         </p>
