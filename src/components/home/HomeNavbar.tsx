@@ -44,6 +44,8 @@ const HomeNavbar = () => {
   const router = useRouter();
   const { isUp, yOffset } = useScroll();
 
+  const signInActive = router.pathname === "/signin";
+
   const showMenu = () => {
     if (isUp && menuClick) {
       return true;
@@ -67,7 +69,7 @@ const HomeNavbar = () => {
         className="sticky z-50 py-4 transition-all duration-300 bg-white shadow"
       >
         <Container className="flex h-10 items-center justify-between">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 w-full">
             <Image
               src={logo}
               width={80}
@@ -77,22 +79,30 @@ const HomeNavbar = () => {
               objectPosition="center"
             />
             <Link href="/">
-              <a className="items-center hidden text-lg font-bold uppercase md:text-xl sm:block text-primary">
+              <a className="items-center hidden text-lg font-bold uppercase md:text-xl lg:block text-primary">
                 Ground<span className="text-secondary">Work.</span>PH
               </a>
             </Link>
 
-            <div className="items-center hidden md:flex">
-              {links.map(({ name, href }) => {
-                const active = router.pathname === href;
-                return (
-                  <Link key={`link-${href}`} href={href}>
-                    <a className={`nav-link ${active && "bg-primary"}`}>
-                      {name}
-                    </a>
-                  </Link>
-                );
-              })}
+            <div className="hidden md:flex w-full xl:justify-between">
+              <div className="flex items-center">
+                {links.map(({ name, href }) => {
+                  const active = router.pathname === href;
+                  return (
+                    <Link key={`link-${href}`} href={href}>
+                      <a className={`nav-link ${active && "bg-primary"}`}>
+                        {name}
+                      </a>
+                    </Link>
+                  );
+                })}
+              </div>
+
+              <Link href="/signin">
+                <a className={`nav-link ${signInActive && "bg-primary"}`}>
+                  Sign In
+                </a>
+              </Link>
             </div>
           </div>
 
@@ -106,7 +116,7 @@ const HomeNavbar = () => {
         }}
         className="md:hidden h-screen bg-white w-[180px] shadow fixed z-40 p-8 top-0 transition-all duration-300"
       >
-        <div className="mt-24 text-center text-secondary flex flex-col space-y-16">
+        <div className="mt-24 text-center text-secondary flex flex-col space-y-12">
           {links.map(({ name, href }) => {
             const active = router.pathname === href;
             return (
@@ -115,6 +125,10 @@ const HomeNavbar = () => {
               </Link>
             );
           })}
+
+          <Link href="/signin">
+            <a className="nav-link">Sign In</a>
+          </Link>
         </div>
       </div>
     </>
