@@ -35,6 +35,10 @@ body {
   .step-circle {
     @apply rounded-full md:h-10 md:w-10 h-8 w-8 text-sm grid place-items-center mb-2;
   }
+
+  .nav-link {
+    @apply px-6 text-sm text-black py-1 rounded-full mr-2 bg-[#E7D6F9];
+  }
 }
 
 .underlined-headings {
@@ -47,4 +51,60 @@ body {
     height: 5px;
     background-color: black;
   }
+}
+
+// hamburger menu
+
+.nav-menu span:nth-child(1) {
+  top: 0px;
+}
+
+.nav-menu span:nth-child(2),
+.nav-menu span:nth-child(3) {
+  top: 9px;
+}
+
+.nav-menu span:nth-child(4) {
+  top: 18px;
+}
+
+.nav-menu.open span:nth-child(1) {
+  top: 9px;
+  width: 0%;
+  left: 50%;
+}
+
+.nav-menu.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.nav-menu.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.nav-menu.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.nav-menu {
+  width: 30px;
+  height: 22.5px;
+  position: relative;
+  margin: 5px auto;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-menu span {
+  display: block;
+  position: absolute;
+  height: 4.5px;
+  width: 100%;
+  background: #132d63;
+  border-radius: 4.5px;
+  opacity: 1;
+  left: 0;
+  transition: 0.25s ease-in-out;
 }
