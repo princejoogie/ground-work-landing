@@ -7,7 +7,7 @@ const title = "Ground Work | Contact";
 const description =
   "An online B2B platform designed to create and gather networks for business establishments in the country!";
 const url = "https://ground-work-ph.vercel.app/about";
-const imageUrl = `${window.location.protocol}//${window.location.host}/assets/images/final-group-photo.png`;
+const imageUrl = `https://ground-work-ph.vercel.app/assets/images/final-group-photo.png`;
 
 const Contact: NextPage = () => {
   return (
