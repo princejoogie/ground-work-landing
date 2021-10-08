@@ -2,40 +2,12 @@ import React from "react";
 import type { NextPage } from "next";
 import { Container, HomeLayout } from "@/components";
 import ServicesPage from "@/components/services";
-
-const title = "Ground Work | Services";
-const description =
-  "An online B2B platform designed to create and gather networks for business establishments in the country!";
-const url = "https://ground-work-ph.vercel.app/about";
-const imageUrl = `https://ground-work-ph.vercel.app/assets/images/final-group-photo.png`;
+import { useSeo } from "@/hooks";
 
 const Services: NextPage = () => {
+  const { seo } = useSeo({ page: "Services" });
   return (
-    <HomeLayout
-      title={title}
-      description={description}
-      openGraph={{
-        url,
-        title,
-        description,
-        images: [
-          {
-            url: imageUrl,
-            width: 800,
-            height: 600,
-            alt: "Group Photo",
-            type: "image/png",
-          },
-        ],
-        type: "website",
-        site_name: "Ground Work",
-      }}
-      twitter={{
-        cardType: "summary_large_image",
-        handle: "@groundwork_ph",
-        site: "@groundwork_ph",
-      }}
-    >
+    <HomeLayout {...seo}>
       <div className="flex flex-col mt-8">
         <Container>
           <ServicesPage />

@@ -10,40 +10,13 @@ import {
   Testimonial,
 } from "@/components";
 import { LinkButton } from "@/components/buttons";
-
-const title = "Ground Work | Home";
-const description =
-  "An online B2B platform designed to create and gather networks for business establishments in the country!";
-const url = "https://ground-work-ph.vercel.app/";
-const imageUrl = `https://ground-work-ph.vercel.app/assets/images/final-group-photo.png`;
+import { useSeo } from "@/hooks";
 
 const Index: NextPage = () => {
+  const { seo } = useSeo({ page: "Home" });
+
   return (
-    <HomeLayout
-      title={title}
-      description={description}
-      openGraph={{
-        url,
-        title,
-        description,
-        images: [
-          {
-            url: imageUrl,
-            width: 800,
-            height: 600,
-            alt: "Group Photo",
-            type: "image/png",
-          },
-        ],
-        type: "website",
-        site_name: "Ground Work",
-      }}
-      twitter={{
-        cardType: "summary_large_image",
-        handle: "@groundwork_ph",
-        site: "@groundwork_ph",
-      }}
-    >
+    <HomeLayout {...seo}>
       <div className="relative">
         <div className={styles.bgImage} />
 
