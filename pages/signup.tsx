@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
-import { Container, Footer } from "@/components";
+import { Container } from "@/components";
 import { Step1, Step2, Step3 } from "@/components/signup";
 import { useSeo } from "@/hooks";
 
@@ -15,8 +15,8 @@ const SignUp: NextPage = () => {
     <>
       <NextSeo {...seo} />
 
-      <div className="min-h-screen bg-gray-100">
-        <Container className="flex flex-col min-h-screen py-10 ">
+      <div className="bg-gray-100">
+        <Container className="flex flex-col min-h-screen py-10">
           <AnimatePresence>
             {step === 1 && <Step1 setStep={setStep} step={step} />}
             {step === 2 && <Step2 setStep={setStep} step={step} />}
@@ -24,7 +24,6 @@ const SignUp: NextPage = () => {
           </AnimatePresence>
         </Container>
       </div>
-      <Footer />
     </>
   );
 };

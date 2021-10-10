@@ -24,20 +24,20 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
   return (
     <form
       spellCheck="false"
-      className="bg-white rounded-2xl flex flex-col items-center w-[95%] md:w-[600px] mx-auto min-h-screen pb-8 shadow-xl"
+      className="bg-white rounded-2xl flex flex-1 flex-col items-center w-[95%] md:w-[600px] mx-auto pb-8 shadow-xl"
     >
-      <div className="w-full flex flex-col items-center py-8 shadow-lg rounded-b-lg">
-        <div className="text-center flex items-center justify-center mb-8 relative w-full">
+      <div className="flex flex-col items-center w-full py-8 rounded-b-lg shadow-lg">
+        <div className="relative flex items-center justify-center w-full mb-8 text-center">
           {step !== 1 && (
             <button
               type="button"
               onClick={() => move(back)}
-              className="sm:text-3xl text-xl absolute left-8"
+              className="absolute text-xl sm:text-3xl left-8"
             >
               <BiArrowBack />
             </button>
           )}
-          <h1 className="font-bold text-2xl md:text-3xl text-secondary">
+          <h1 className="text-2xl font-bold md:text-3xl text-secondary">
             {title}
           </h1>
         </div>
