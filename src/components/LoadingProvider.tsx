@@ -11,7 +11,7 @@ const LoadingProvider: React.FC<LoadingProps> = ({
 }) => {
   const { loading } = useAuth();
 
-  if (!loading) {
+  if (loading) {
     return (
       <div className="flex flex-col items-center justify-center w-full h-screen space-y-2">
         <div className="flex p-3 space-x-2 bg-white rounded-full loader">
