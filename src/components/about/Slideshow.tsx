@@ -25,6 +25,8 @@ const Slideshow = () => {
                 quality={30}
                 objectFit="cover"
                 objectPosition="center"
+                placeholder="blur"
+                blurDataURL={image}
               />
             </div>
           );

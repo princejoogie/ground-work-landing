@@ -27,6 +27,18 @@ body {
   .underlined {
     @apply absolute w-10 h-1 -ml-6 bg-black mt-7 inset-1/2;
   }
+
+  .primary-ring {
+    @apply focus:ring-4 focus:ring-[#5D88FF] transition-all duration-200 ring-offset-2;
+  }
+
+  .step-circle {
+    @apply grid w-8 h-8 mb-2 text-sm rounded-full md:h-10 md:w-10 place-items-center;
+  }
+
+  .nav-link {
+    @apply px-6 text-sm text-black py-1 rounded-full mr-2 bg-[#E7D6F9];
+  }
 }
 
 .underlined-headings {
@@ -39,4 +51,76 @@ body {
     height: 5px;
     background-color: black;
   }
+}
+
+.loader div {
+  animation-duration: 0.5s;
+}
+
+.loader div:first-child {
+  animation-delay: 0.1s;
+}
+
+.loader div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader div:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+// hamburger menu
+
+.nav-menu span:nth-child(1) {
+  top: 0px;
+}
+
+.nav-menu span:nth-child(2),
+.nav-menu span:nth-child(3) {
+  top: 9px;
+}
+
+.nav-menu span:nth-child(4) {
+  top: 18px;
+}
+
+.nav-menu.open span:nth-child(1) {
+  top: 9px;
+  width: 0%;
+  left: 50%;
+}
+
+.nav-menu.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.nav-menu.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.nav-menu.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.nav-menu {
+  width: 30px;
+  height: 22.5px;
+  position: relative;
+  margin: 5px auto;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-menu span {
+  display: block;
+  position: absolute;
+  height: 4.5px;
+  width: 100%;
+  background: #132d63;
+  border-radius: 4.5px;
+  opacity: 1;
+  left: 0;
+  transition: 0.25s ease-in-out;
 }
