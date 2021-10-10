@@ -1,6 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import styles from "@styles/home.module.css";
+import { useSeo } from "@/hooks";
+
 import {
   Container,
   HomeLayout,
@@ -12,11 +14,10 @@ import {
 import { LinkButton } from "@/components/buttons";
 
 const Index: NextPage = () => {
+  const { seo } = useSeo({ page: "Home", route: "" });
+
   return (
-    <HomeLayout
-      title="Ground Work | Home"
-      description="An online B2B platform designed to create and gather networks for business establishments in the country!"
-    >
+    <HomeLayout {...seo}>
       <div className="relative">
         <div className={styles.bgImage} />
 

@@ -1,5 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
+
 import { Container, HomeLayout } from "@/components";
 import {
   Clients,
@@ -8,13 +9,13 @@ import {
   MissionVision,
   Team,
 } from "@/components/about";
+import { useSeo } from "@/hooks";
 
 const About: NextPage = () => {
+  const { seo } = useSeo({ page: "About", route: "about" });
+
   return (
-    <HomeLayout
-      title="Ground Work | About"
-      description="An online B2B platform designed to create and gather networks for business establishments in the country!"
-    >
+    <HomeLayout {...seo}>
       <div className="flex flex-col mt-8">
         <Container>
           <Main />

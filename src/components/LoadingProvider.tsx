@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { SyncLoader } from "react-spinners";
+import React from "react";
 import { useAuth } from "@/contexts/AuthContext";
 
 interface LoadingProps {
@@ -11,26 +10,16 @@ const LoadingProvider: React.FC<LoadingProps> = ({
   message = "Loading",
 }) => {
   const { loading } = useAuth();
-  const [dots, setDots] = useState("...");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (dots.length >= 3) setDots(".");
-      else setDots(`${dots}.`);
-    }, 500);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [dots]);
 
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center w-full h-screen space-y-6">
-        <SyncLoader color="#132D63" size={10} speedMultiplier={0.75} />
-        <p className="text-xs text-gray-500">
-          {message} {dots}
-        </p>
+        <div className="flex p-5 space-x-3 bg-white rounded-full loader">
+          <div className="w-5 h-5 rounded-full bg-secondary animate-bounce" />
+          <div className="w-5 h-5 rounded-full bg-secondary animate-bounce" />
+          <div className="w-5 h-5 rounded-full bg-secondary animate-bounce" />
+        </div>
+        <p className="text-lg font-medium text-gray-500">{message}</p>
       </div>
     );
   }
