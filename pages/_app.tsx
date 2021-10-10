@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import { AnimatePresence } from "framer-motion";
 import Router from "next/router";
 import NProgress from "nprogress";
+
 import { AuthProvider } from "@/contexts/AuthContext";
 
 Router.events.on("routeChangeStart", () => NProgress.start());

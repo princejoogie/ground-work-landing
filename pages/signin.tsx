@@ -8,7 +8,7 @@ import { ProviderButton } from "@/components/buttons";
 import { useSeo } from "@/hooks";
 
 const Home: NextPage = () => {
-  const { seo } = useSeo({ page: "Sign In" });
+  const { seo } = useSeo({ page: "Sign In", route: "signin" });
 
   return (
     <HomeLayout {...seo}>

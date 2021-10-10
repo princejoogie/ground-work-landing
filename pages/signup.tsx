@@ -8,7 +8,7 @@ import { Step1, Step2, Step3 } from "@/components/signup";
 import { useSeo } from "@/hooks";
 
 const SignUp: NextPage = () => {
-  const { seo } = useSeo({ page: "Sign Up" });
+  const { seo } = useSeo({ page: "Sign Up", route: "signup" });
   const [step, setStep] = useState(1);
 
   return (

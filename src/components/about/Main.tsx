@@ -36,6 +36,8 @@ const Main = () => {
           quality={30}
           objectFit="contain"
           objectPosition="center"
+          placeholder="blur"
+          blurDataURL={classHeader}
         />
       </div>
     </section>

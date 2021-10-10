@@ -1,10 +1,11 @@
 import React from "react";
 import type { NextPage } from "next";
+
 import { Container, HomeLayout } from "@/components";
 import { useSeo } from "@/hooks";
 
 const Blog: NextPage = () => {
-  const { seo } = useSeo({ page: "Blog" });
+  const { seo } = useSeo({ page: "Blog", route: "blog" });
 
   return (
     <HomeLayout {...seo}>

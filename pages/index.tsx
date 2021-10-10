@@ -1,6 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import styles from "@styles/home.module.css";
+import { useSeo } from "@/hooks";
+
 import {
   Container,
   HomeLayout,
@@ -10,10 +12,9 @@ import {
   Testimonial,
 } from "@/components";
 import { LinkButton } from "@/components/buttons";
-import { useSeo } from "@/hooks";
 
 const Index: NextPage = () => {
-  const { seo } = useSeo({ page: "Home" });
+  const { seo } = useSeo({ page: "Home", route: "" });
 
   return (
     <HomeLayout {...seo}>

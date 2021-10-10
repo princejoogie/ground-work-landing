@@ -47,6 +47,8 @@ const Clients = () => {
               height={150}
               objectFit="contain"
               objectPosition="center"
+              placeholder="blur"
+              blurDataURL={image}
             />
           </div>
         ))}

@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../../public/assets/images/logo1.png";
+// import logo from "../../../public/assets/images/logo1.png";
 import { LinkButton } from "../buttons";
+
+const logo = "/assets/images/logo1.png";
 
 const steps = [
   {
@@ -46,6 +48,8 @@ const Testimonial = () => {
             layout="fill"
             objectFit="contain"
             objectPosition="center"
+            placeholder="blur"
+            blurDataURL={logo}
           />
         </div>
         <div className="flex flex-col justify-center w-full md:ml-4 md:w-1/2 h-60">

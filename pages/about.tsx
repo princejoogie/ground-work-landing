@@ -1,5 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
+
 import { Container, HomeLayout } from "@/components";
 import {
   Clients,
@@ -11,7 +12,7 @@ import {
 import { useSeo } from "@/hooks";
 
 const About: NextPage = () => {
-  const { seo } = useSeo({ page: "About" });
+  const { seo } = useSeo({ page: "About", route: "about" });
 
   return (
     <HomeLayout {...seo}>
